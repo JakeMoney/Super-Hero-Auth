@@ -2,6 +2,9 @@ body
 {
         background-image: url("http://static1.wikia.nocookie.net/bureauofotherworldlyoperations/images/5/50/Wiki-background");
         color: white !important;
+                   /* <------ */
+
+
 }
 
 #menuButtons
@@ -43,7 +46,47 @@ body
 }
 
 
+h1
+{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F44242 !important;
+}
+
+#menuButtons
+{
+	text-align: center;
+}
+
+#editOptions
+{
+	background-color: #ccb9b3;
+	text-align: center;
+	border-radius: 10px;
+	margin-top: 20px;
+	color: black;
+	display: inline-block;
+	padding: 20px;
+}
+
+#heroImage
+{
+	margin-top: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+.centerWrapper
+{
+	text-align: center;
+}
+
+.editLabel
+{
+	float: left;
+	margin-left: 8px;
+}
+
 .myBTN
 {
-        margin-top: 10px;
+	margin-top: 10px;
 }

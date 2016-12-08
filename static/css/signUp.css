@@ -2,6 +2,13 @@ body
 {
 	background-color: black !important;
 	color: #f44242 !important;
+	background-image: url("http://static1.wikia.nocookie.net/bureauofotherworldlyoperations/images/5/50/Wiki-background");
+        
+}
+
+h1
+{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 

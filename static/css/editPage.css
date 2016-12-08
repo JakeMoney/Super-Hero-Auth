@@ -2,8 +2,14 @@ body
 {
 	background-color: black !important;
 	color: #f44242 !important;
+	background-image: url("https://dmmoore.files.wordpress.com/2014/11/blurry-faces.png?w=770");
+	
 }
 
+h1
+{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 #menuButtons
 {

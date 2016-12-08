@@ -1,0 +1,30 @@
+//THIS is the same as the default app.js. It is the server config file. If you
+//use a server config file that is not the default app.js, you must type in
+//node NAMEOFFILE to run the server. 
+
+var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var expressSession = require('express-session');
+var mongoStore = require('connect-mongo')({session: expressSession});
+var mongoose = require('mongoose');
+require('./models/users_model.js');
+var conn = mongoose.connect('mongodb://localhost/myapp');
+var app = express();
+app.engine('.html', require('ejs').__express);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(expressSession({
+	secret: 'SECRET',
+	cookie: {maxAge:2628000000},
+	resave: true,
+	saveUninitialized: true,
+	store: new mongoStore({
+		mongooseConnection:mongoose.connection
+	})
+}));
+require('./routes')(app);
+app.listen(3003);

@@ -10,21 +10,20 @@
   <div class="form-container">
         <div class = "centerBox">
         <h1>LOGIN</h1>
-        <div id="loginInfo">
+        <div id="editOptions">
                 <form method="POST" action="/login">
-                        <div id="signin">
-                        <label>Username:</label>
+                        <div id="">
+                        <label>name:</label>
                         <input class="form-control" type="text" name="username"><br>
                         <label>Password:</label>
                         <input class="form-control"  type="password" name="password"><br>
 
-                        <input type="submit" value="Login"><br>
+                        <input type="submit" class = "btn btn-danger myBTN"value="Login"><br>
                         <hr><%=msg %>
-                        <p>New Here?</p><a href="/signup">Sign Up</a>
+                        <p>New Here?</p><a class = "btn btn-danger" href="/signup">Hero Registration</a>
                         </div>
     </form>
   </div>
   </div>
 </body>
 </html>
-
