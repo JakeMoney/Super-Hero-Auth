@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>User Login and Sessions</title>
+  <link rel="stylesheet" type="text/css" 
+      href="/static/css/editPage.css" />
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="form-container" ng-controller="myController">
+		<div class = "centerWrapper">
+			<h1>Identity</h1>
+			<div id = "editOptions">
+				<form method="POST" action="/user/update">
+				
+					<label class = "editLabel">Username:</label>
+					<input class = "form-control" type="text" name="username" ng-model="user.username" disabled><br>
+					
+					<label class = "editLabel">Email:</label>
+					<input class = "form-control" type="email" name="email" ng-model="user.email"><br>
+					
+					<label class = "editLabel">Hero Name:</label>
+					<input class = "form-control" type="text" name="heroName" ng-model="user.hero.name"><br>
+					
+					<label class = "editLabel">Hero Power:</label>
+					<input class = "form-control" type="text" name="heroPower" ng-model="user.hero.power"><br>
+					
+					<label class = "editLabel">Hero Image:</label>
+					<input class = "form-control" type="text" name="heroImage" ng-model="user.hero.img"><br>
+							
+					<input type="submit" class = "btn btn-danger myBTN" value="Save">
+					
+				</form>
+				
+				<form method="POST" action="/user/delete">
+					<input type="submit" class = "btn btn-danger myBTN" value="Delete User">
+				</form>
+				
+				<a href="/"><button class = "btn btn-danger myBTN">Home</button></a>
+			</div>
+		</div>		
+	</div>
+	<script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+	<script src="/static/js/my_app.js"></script>
+</body>
+</html>
